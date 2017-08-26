@@ -4,7 +4,7 @@ var button = document.getElementById('counter');
 
 button.onClick = function () {
     
-    //create a request
+    //create a request object
     var request = new XMLHttpRequest();
     //capture the response and store it in a variable
     request.onreadystatechange = function () {
@@ -22,5 +22,6 @@ button.onClick = function () {
     };
     
     //make the request
- 
+    request.open('GET', 'http://jaanvi2akkineni.imad.hasura-app.io/counter', true);
+    request.send(null);
 };
